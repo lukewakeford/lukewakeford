@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SlimDin Kit - Luke Wakeford</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background-color: #111; color: #fff; max-width: 650px; margin: 40px auto; padding: 0 20px; line-height: 1.6; }
+        header { margin-bottom: 40px; }
+        header h1 { font-size: 1.5rem; margin: 0; }
+        a { color: #aaa; text-decoration: none; }
+        a:hover { color: #fff; }
+        
+        /* Gallery Styles */
+        .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 25px 0; }
+        .gallery-grid img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 4px; background-color: #222; }
+        
+        .nav-links { margin: 30px 0; }
+        .nav-links a { font-weight: bold; color: #fff; text-decoration: underline; }
+        h2 { font-size: 1.2rem; margin-top: 30px; color: #ddd; }
+        ul { padding-left: 20px; }
+        footer { border-top: 1px solid #222; padding-top: 20px; margin-top: 60px; display: flex; gap: 20px; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1><a href="index.html">Luke Wakeford</a></h1>
+    </header>
+
+    <main>
+        <h1>SlimDin Kit</h1>
+        
+        <div class="gallery-grid">
+            <img src="images/slimdin-1.jpg" alt="SlimDin Showcase 1">
+            <img src="images/slimdin-2.jpg" alt="SlimDin Showcase 2">
+            <img src="images/slimdin-3.jpg" alt="SlimDin Showcase 3">
+        </div>
+
+        <div class="nav-links">
+            <a href="slimdin-assembly.html">→ View Assembly Instructions</a>
+        </div>
+
+        <p>Transform your MIDI setup with SlimDin. This ultra-low-profile 5-pin DIN to 3.5mm TRS jack adapter kit is designed for musicians and tinkerers who need maximum functionality in an exceptionally compact form factor.</p>
+
+        <h2>Features</h2>
+        <ul>
+            <li><strong>Ultra-Compact Design:</strong> Streamline your setup with one of the smallest MIDI adapters available.</li>
+            <li><strong>DIY Assembly Kit:</strong> Comes with a precision PCB, three high-quality DIN pins, and a durable TRS socket for easy soldering.</li>
+            <li><strong>Configurable MIDI Standards:</strong> Choose between MIDI Type A or B by bridging clearly marked pads on the PCB.</li>
+            <li><strong>Optimize with TRS Cables:</strong> Use lightweight 3.5mm TRS cables for all your MIDI runs, reducing bulk and enhancing portability.</li>
+        </ul>
+
+        <h2>Why Only 3 DIN Pins?</h2>
+        <p>SlimDin uses only 3 of the 5 DIN pins to achieve its ultra-compact design. These pins carry all the necessary MIDI signals—Ground, Current Source, and Current Sink—ensuring full compatibility with standard MIDI devices. By omitting the unused pins, SlimDin minimizes its footprint without sacrificing functionality.</p>
+
+        <h2>What's in the Kit?</h2>
+        <ul>
+            <li>1x SlimDin PCB</li>
+            <li>3x High-quality DIN pins</li>
+            <li>1x 3.5mm TRS jack socket</li>
+        </ul>
+    </main>
+
+    <footer>
+        <a href="https://github.com/lukewakeford" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://instagram.com/applecorexy" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.thingiverse.com/applecorexy/designs" target="_blank" rel="noopener">Thingiverse</a>
+    </footer>
+
+</body>
+</html>

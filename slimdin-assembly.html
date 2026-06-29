@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SlimDin Assembly Instructions - Luke Wakeford</title>
+    <style>
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+            background-color: #111; 
+            color: #fff; 
+            max-width: 650px; 
+            margin: 40px auto; 
+            padding: 0 20px; 
+            line-height: 1.6; 
+        }
+        header { margin-bottom: 40px; }
+        header h1 { font-size: 1.5rem; margin: 0; }
+        a { color: #aaa; text-decoration: none; transition: color 0.2s; }
+        a:hover { color: #fff; }
+        .back-link { margin-bottom: 20px; display: inline-block; }
+        
+        .materials {
+            background-color: #1a1a1a;
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 40px;
+        }
+        .materials h2 { margin-top: 0; font-size: 1.2rem; }
+        .materials ul { padding-left: 20px; margin-bottom: 0; }
+
+        .step { margin-bottom: 50px; border-bottom: 1px solid #222; padding-bottom: 40px; }
+        .step h2 { font-size: 1.3rem; margin-top: 0; color: #fff; }
+        .step p { margin: 10px 0 20px 0; color: #ccc; }
+        .step ul { padding-left: 20px; color: #ccc; }
+        .step img { max-width: 100%; height: auto; display: block; margin: 15px 0; background-color: #222; border-radius: 4px; }
+        
+        .warning {
+            background-color: #2a2215;
+            border-left: 4px solid #d97706;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 4px 4px 0;
+            font-size: 0.95rem;
+        }
+
+        footer { border-top: 1px solid #222; padding-top: 20px; margin-top: 60px; display: flex; gap: 20px; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1><a href="index.html">Luke Wakeford</a></h1>
+    </header>
+
+    <main>
+        <a href="slimdin.html" class="back-link">← Back to SlimDin Project</a>
+        <h1>SlimDin Assembly Instructions</h1>
+
+        <div class="materials">
+            <h2>Things You’ll Need:</h2>
+            <ul>
+                <li>SlimDin kit</li>
+                <li>Soldering iron with a 2-3mm tip</li>
+                <li>Solder</li>
+                <li>Multimeter (optional, for testing connections)</li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h2>Step 1: Solder the DIN Pins</h2>
+            <p>Locate the side of the PCB with the A/B Type selection pads. This is the side where the DIN pins will be installed.</p>
+            <img src="images/assembly-step1.jpg" alt="Locating A/B selection pads">
+
+            <p>Insert the first DIN pin and tack it in place on the opposite side of the PCB with a small amount of solder initially.</p>
+            <img src="images/assembly-step2.jpg" alt="Tacking first pin in place">
+
+            <p><em>And now for the tricky bit!</em></p>
+            
+            <div class="warning">
+                <strong>Safety Note:</strong> Please be aware that the PCB can heat up during this process; you might opt to wear gloves or to support the assembly in some other way for comfort and safety.
+            </div>
+
+            <p>Hold the assembly on a heatproof surface applying gentle pressure under the pin to seat it fully.</p>
+            <img src="images/assembly-step3.jpg" alt="Seating the pin on a heatproof surface">
+
+            <p>Use the soldering iron to apply more solder and heat to the joint while maintaining pressure. You may need to pre-apply solder to your iron in order to achieve this.</p>
+            <img src="images/assembly-step4.jpg" alt="Applying heat and solder under pressure">
+
+            <p>Another option might be to use a solder helper / helping hands to hold the PCB and pin securely in position. Repeat this process until the pin is seated nicely. Repeat for the remaining two DIN pins, soldering them one at a time.</p>
+            <img src="images/assembly-step5.jpg" alt="Repeating for remaining pins">
+        </div>
+
+        <div class="step">
+            <h2>Step 2: Solder the TRS Jack Socket</h2>
+            <p>Flip the PCB to the side where the outline of the TRS port is visible. Align the TRS jack socket with its corresponding footprint on the PCB. Ensure the pins fit snugly into the holes.</p>
+            <img src="images/assembly-step6.jpg" alt="Aligning TRS jack socket">
+
+            <p>Solder each pin of the TRS socket to the PCB, making sure the joints are clean and secure.</p>
+            <img src="images/assembly-step7.jpg" alt="Soldering TRS socket pins">
+        </div>
+
+        <div class="step">
+            <h2>Step 3: Configure MIDI Type</h2>
+            <p>Flip the PCB to the side where the A/B Type selection pads are located. Determine the MIDI standard your setup uses:</p>
+            <ul>
+                <li><strong>Type A:</strong> Used by most MIDI devices.</li>
+                <li><strong>Type B:</strong> Used by certain devices (check your gear specifications).</li>
+            </ul>
+            <p>Bridge the corresponding pads (Type A or Type B) using a small blob of solder. Ensure the connection is clean and doesn’t short other pads.</p>
+            <img src="images/assembly-step8.jpg" alt="Type A configuration bridge">
+        </div>
+
+        <div class="step">
+            <h2>Step 4: Inspect and Test</h2>
+            <p>Check for solder bridges (unintended connections between pads). Inspect all joints to ensure they are shiny and properly formed.</p>
+            <img src="images/assembly-step9.jpg" alt="Inspecting solder joints">
+
+            <p>If you have a multimeter, test for continuity to verify each TRS pin connects to only one DIN pin. Connect your assembled SlimDin to a MIDI device to confirm the MIDI signal is transmitted correctly.</p>
+            <p><em>Continuity testing in Type A configuration</em></p>
+            <img src="images/assembly-step10.gif" alt="Continuity testing demonstration">
+        </div>
+
+        <p style="font-size: 1.2rem; text-align: center; margin-top: 40px; font-weight: bold;">Enjoy your custom-built SlimDin!</p>
+    </main>
+
+    <footer>
+        <a href="https://github.com/lukewakeford" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://instagram.com/applecorexy" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.thingiverse.com/applecorexy/designs" target="_blank" rel="noopener">Thingiverse</a>
+    </footer>
+
+</body>
+</html>
